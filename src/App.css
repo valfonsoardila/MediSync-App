@@ -1,38 +1,77 @@
+html, body {
+  font-size: 16px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    20deg,
+    #fff 10%,
+    rgb(245, 245, 245) 30%,
+    /* Cambia este valor para hacer la transición más suave */ rgb(225, 225, 245) 50%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245) 80%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245)100%
+  );
+}
 .App {
   text-align: center;
+  position: fixed;
+  background: linear-gradient(
+    20deg,
+    #fff 10%,
+    rgb(245, 245, 245) 30%,
+    /* Cambia este valor para hacer la transición más suave */ rgb(225, 225, 245) 50%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245) 80%,
+    /* Añade más paradas de color para una transición más suave */ rgb(245, 245, 245)100%
+  );
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#tsparticles {
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 7px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 30, 0.8);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgba(22, 160, 133, 0.7), rgba(18,18,32,0.8));
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar-thumb:hover {
+  animation: blink 1s ease infinite;
+  background: linear-gradient(to top, rgba(41, 207, 174, 0.8), rgba(18,18,32,0.6));
+  border-radius: 12px;
+}
+.lazy-load-image-background.blur {
+  filter: blur(15px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  filter: blur(0);
+  transition: filter .3s;
 }
+
+.lazy-load-image-background.blur > img {
+  opacity: 0;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
