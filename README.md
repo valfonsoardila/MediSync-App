@@ -3,5 +3,4 @@ Aplicacion web para la gestion de consultorio medico hecho en React Js y Native.
 
 # `Logo`
 
-![ic](https://github.com/VictorArdila/MediSync-App/assets/89551043/af6b1216-0892-45ce-b4cf-9dc6d5af165b)
-
+![ic](https://github.com/VictorArdila/MediSync-App/assets/89551043/1e0f7de3-6751-49d1-a829-dd393e6d7771)
