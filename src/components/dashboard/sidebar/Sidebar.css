@@ -6,8 +6,8 @@
   width: 8%;
   transition: width 0.5s;
   height: 100%;
-  background: rgba(31, 31, 31, 0.8);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgb(94, 242, 242, .6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 .container-sidebar:hover {
   width: 15%;
@@ -23,12 +23,22 @@
   transition: height 0.2s;
 }
 .sidebar-logo img {
-  width: 48%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
+}
+.sidebar-logo-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s;
 }
 .sidebar-logo h1 {
   font-size: 14px;
-  color: #fff;
+  color: #000;
   margin: 0;
   transition: display 0.2s;
 }
@@ -41,7 +51,7 @@
   height: 15%;
 }
 .profile:hover img{
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -51,7 +61,7 @@
 }
 .profile h1 {
   font-size: 14px;
-  color: #fff;
+  color: #000;
   margin: 0;
 }
 .sidebar-menu {
@@ -75,7 +85,7 @@
   height: 12%;
   font-size: 18px;
   font-weight: 600;
-  color: #2bd8b5;
+  color: #03658C;
   align-items: center;
   justify-content: center;
 }
@@ -84,7 +94,7 @@
   flex-direction: row;
   width: 100%;
   height: 8%;
-  background: rgba(70, 70, 70, 0.2);
+  background: transparent;
   align-items: center;
   justify-content: center;
 }
@@ -93,46 +103,59 @@
   flex-direction: column;
   width: 100%;
   height: 56%;
-  background: rgba(70, 70, 70, 0.2);
+  background: transparent;
   align-items: center;
   justify-content: center;
 }
 .sidebar-menu-item-sesion:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(3, 166, 166);
   border: none;
-  border-radius: 10px;
   cursor: pointer;
 }
+.sidebar-menu-item-sesion:hover span{
+  color: #fff;
+}
+.sidebar-menu-item-sesion:hover svg{
+  color: #fff;
+}
 .sidebar-menu-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(3, 166, 166);
+  color: #fff;
   border: none;
   cursor: pointer;
+}
+.sidebar-menu-item:hover span{
+  color: #fff;
+}
+.sidebar-menu-item:hover svg{
+  color: #fff;
 }
 .sidebar-menu-item-sesion span {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: #000;
 }
 .sidebar-menu-item span {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: #000;
 }
 .sidebar-menu-item-sesion svg {
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  color: #fff;
+  color: #000;
 }
 .sidebar-menu-item svg {
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  color: #fff;
+  color: #000;
 }
 .collapsible-item {
   display: flex;
   flex-direction: column;
+  background: transparent;
   width: 100%;
 }
 .collapsible-header {
@@ -145,27 +168,33 @@
   transition: all 0.3s ease;
 }
 .collapsible-header:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(3, 166, 166);
   border: none;
   cursor: pointer;
+}
+.collapsible-header:hover span{
+  color: #fff;
+}
+.collapsible-header:hover svg{
+  color: #fff;
 }
 .collapsible-header svg{
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    color: #fff;
+    color: #000;
 }
 .collapsible-header span{
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
+    color: #000;
 }
 .collapsible-body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(90, 90, 90, 0.8);
+  background: rgb(171, 222, 202);
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -178,18 +207,18 @@
   width: 100%;
 }
 .collapsible-body-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #B3F2E7;
   width: 100%;
   cursor: pointer;
 }
 .collapsible-body-item span {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
+  color: #000;
 }
 .collapsible-body-item svg {
   width: 16px;
   height: 16px;
   margin-right: 5px;
-  color: #fff;
+  color: #000;
 }

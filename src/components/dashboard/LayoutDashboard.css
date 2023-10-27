@@ -2,7 +2,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-size: auto;
+  background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
   align-items: center;

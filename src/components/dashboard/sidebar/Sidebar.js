@@ -2,19 +2,21 @@ import React, { useState } from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBox,
-  faBoxOpen,
+  faCalendar,
+  faClock,
   faCog,
   faDashboard,
   faDoorOpen,
-  faLayerGroup,
+  faHeartPulse,
+  faStethoscope,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Sidebar.css";
 
 const Sidebar = ({ onComponentChange }) => {
   const [expandedData, setExpandedData] = useState(false);
   const [hover, setHover] = useState(false);
-  
+
   const handleDashboardClick = () => {
     onComponentChange("dashboard");
     console.log("dashboard");
@@ -24,7 +26,7 @@ const Sidebar = ({ onComponentChange }) => {
     console.log("profile");
   };
   const handleOutSesionClick = () => {
-    window.location.href = "/authentication";
+    window.location.href = "/";
   };
   const changeHover = () => {
     setHover(!hover);
@@ -40,7 +42,9 @@ const Sidebar = ({ onComponentChange }) => {
       onMouseLeave={changeHover}
     >
       <div className="sidebar-logo" style={{ height: hover ? "0%" : "15%" }}>
-        <img src={resources.logo} alt="logo" />
+        <div className="sidebar-logo-circle" style={{ display: hover ? "none" : "flex"}}>
+          <img src={resources.logo} alt="logo" />
+        </div>
         <h1 style={{ display: hover ? "none" : "block" }}>Dashboard</h1>
       </div>
       <div className="profile">
@@ -51,7 +55,7 @@ const Sidebar = ({ onComponentChange }) => {
         <div className="sidebar-title">
           <span>Menu</span>
         </div>
-        <div className="sidebar-menu-item">
+        <div className="sidebar-menu-item" onClick={handleDashboardClick}>
           <FontAwesomeIcon icon={faDashboard} onClick={handleDashboardClick} />
           <span
             style={{ display: hover ? "flex" : "none" }}
@@ -60,11 +64,20 @@ const Sidebar = ({ onComponentChange }) => {
             Dashboard
           </span>
         </div>
+         <div className="sidebar-menu-item">
+          <FontAwesomeIcon icon={faCalendar} />
+          <span
+            style={{ display: hover ? "flex" : "none" }}
+            onClick={handleDashboardClick}
+          >
+            Citas agendadas
+          </span>
+        </div>
         <div className="collapsible-item" onClick={toggleExpandedData}>
           <div className="collapsible-header">
-            <FontAwesomeIcon icon={faLayerGroup} />
+            <FontAwesomeIcon icon={faUser} />
             <span style={{ display: hover ? "flex" : "none" }}>
-              Nuevo diseño
+              Gestion pacientes
             </span>
           </div>
           {expandedData &&
@@ -73,27 +86,27 @@ const Sidebar = ({ onComponentChange }) => {
             (
               <div className="collapsible-body">
                 <div className="collapsible-body-item">
-                  <FontAwesomeIcon icon={faBox} />
+                  <FontAwesomeIcon icon={faHeartPulse} />
                   <span style={{ display: hover ? "flex" : "none" }}>
-                    Formulario
+                    Diagnostico
                   </span>
                 </div>
                 <div className="collapsible-body-item">
-                  <FontAwesomeIcon icon={faBoxOpen} />
+                  <FontAwesomeIcon icon={faStethoscope} />
                   <span style={{ display: hover ? "flex" : "none" }}>
-                    Hoja de vida
+                    Historial clinico
                   </span>
                 </div>
               </div>
             ))}
         </div>
         <div className="sidebar-menu-item">
-          <FontAwesomeIcon icon={faBoxOpen} />
+          <FontAwesomeIcon icon={faClock} />
           <span style={{ display: hover ? "flex" : "none" }}>
-            Mis plantillas
+            Gestion horarios
           </span>
         </div>
-        <div className="sidebar-menu-item">
+        <div className="sidebar-menu-item" onClick={handleProfileClick}>
           <FontAwesomeIcon icon={faCog} onClick={handleProfileClick} />
           <span
             style={{ display: hover ? "flex" : "none" }}
