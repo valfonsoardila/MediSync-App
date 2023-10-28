@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../header/Header";
-import HomePage from "../../../pages/dashboard/home/HomePage";
-import ProfilePage from "../../../pages/dashboard/profile/ProfilePage";
+import HomePage from "../../../modules/dashboard/home/HomePage";
+import ProfilePage from "../../../modules/dashboard/profile/ProfilePage";
 import { motion } from "framer-motion";
 import "./Container.css";
 

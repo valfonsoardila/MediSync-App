@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./LayoutAuth.css";
 import { resources } from "../../assets/resources";
-import LoginPage from "../../pages/auth/login/LoginPage";
-import RegisterPage from "../../pages/auth/register/RegisterPage";
-import ForgotPage from "../../pages/auth/forgot/ForgotPage";
+import LoginPage from "../../modules/auth/login/LoginPage";
+import RegisterPage from "../../modules/auth/register/RegisterPage";
+import ForgotPage from "../../modules/auth/forgot/ForgotPage";
 import { motion } from "framer-motion";
 
 const LayoutAuth = () => {

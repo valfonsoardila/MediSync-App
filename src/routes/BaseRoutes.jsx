@@ -5,24 +5,27 @@ const LayoutAuth = lazy(() => import("../components/auth/LayoutAuth"));
 const LayoutDasboard = lazy(() =>
   import("../components/dashboard/LayoutDashboard")
 );
+const LayoutScheduling = lazy(() => import("../components/scheduling/LayoutScheduling"));
 
 export const routes = {
   AUTH: "/",
   DASHBOARD: "/dashboard",
+  SCHEDULING: "/scheduling"
 };
 
 const BaseRoutes = () => {
   const location = useLocation();
   const background = location.state?.background;
+
   return (
     <>
       <Routes location={background || location}>
         <Route path={routes.AUTH} element={<LayoutAuth />} />
+        <Route path={routes.SCHEDULING} element={<LayoutScheduling />} />
         <Route
           path={routes.DASHBOARD}
           element={
-            <LayoutDasboard>
-            </LayoutDasboard>
+            <LayoutDasboard />
           }
         />
       </Routes>
