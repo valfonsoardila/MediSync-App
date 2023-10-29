@@ -1,0 +1,145 @@
+.container-diagnostic {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.form-diagnostic {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.form-diagnostic-header {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  width: 100%;
+  height: 20%;
+  border: 1px solid #000;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.form-diagnostic-header-back svg {
+  font-size: 25px;
+}
+.form-diagnostic-header-back:hover svg {
+  color: rgba(25, 22, 23, 0.5);
+  cursor: pointer;
+}
+.form-diagnostic-header-silhouette {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-diagnostic-header-title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-diagnostic-header-silhouette img {
+  width: 68%;
+}
+.form-diagnostic-header-title h1 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.form-diagnostic-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1.5fr 1fr;
+  gap: 5px;
+  width: 100%;
+  height: 80%;
+}
+.form-diagnostic-body-input{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.form-diagnostic-body-search{
+  display: flex;
+  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
+}
+.form-diagnostic-body-search label{
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 1%;
+}
+.form-diagnostic-body-search input{
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  margin-left: 1%;
+}
+.form-diagnostic-body-report {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  height: 80%;
+  margin-top: 2%;
+}
+.form-diagnostic-body-send-report{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.form-diagnostic-body-send-input{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.form-diagnostic-body-send-input label{
+  font-weight: 600;
+  font-size: 18px;
+}
+.form-diagnostic-body-send-input input{
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+}
+.form-diagnostic-body-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.form-diagnostic-body-button button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-diagnostic-body-button:hover button {
+  background: rgba(20, 20, 20, 0.8);
+  color: #fff;
+  border: 1px solid #000;
+}

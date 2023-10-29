@@ -5,7 +5,7 @@ const LayoutAuth = lazy(() => import("../components/auth/LayoutAuth"));
 const LayoutDasboard = lazy(() =>
   import("../components/dashboard/LayoutDashboard")
 );
-const LayoutScheduling = lazy(() => import("../components/scheduling/LayoutScheduling"));
+const LayoutScheduling = lazy(() => import("../components/managepatient/LayoutManagePatient"));
 
 export const routes = {
   AUTH: "/",

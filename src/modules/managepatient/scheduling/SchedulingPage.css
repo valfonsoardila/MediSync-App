@@ -1,0 +1,238 @@
+.container-scheduling {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.form-scheduling {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.form-scheduling-header {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  width: 100%;
+  height: 20%;
+  border: 1px solid #000;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.form-scheduling-header-back svg{
+  font-size: 25px;
+}
+.form-scheduling-header-back:hover svg{
+  color: rgba(25, 22, 23, 0.5);
+  cursor: pointer;
+}
+.form-scheduling-header-silhouette {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-scheduling-header-title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-scheduling-header-silhouette img {
+  width: 68%;
+}
+.form-scheduling-header-title h1 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.form-scheduling-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1.5fr 1fr;
+  gap: 5px;
+  width: 100%;
+  height: 80%;
+}
+.form-scheduling-body-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.form-scheduling-body-calendar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-section-one {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: start;
+}
+.form-section-two {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: end;
+}
+.form-section-one-input {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 7%;
+}
+.form-section-two-input {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: 100%;
+  justify-content: flex-start;
+  padding: 7%;
+}
+.form-section-input {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  justify-content: flex-start;
+  padding-top: 2%;
+}
+.form-section-input label {
+  align-self: start;
+  padding-bottom: 2%;
+  font-weight: 600;
+}
+.form-section-input input {
+  width: 100%;
+  height: 50%;
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  color: #000;
+  font-size: 20px;
+}
+.form-section-collapsible {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fill-available;
+  height: fit-content;
+  justify-content: flex-start;
+  padding-top: 8%;
+  padding-bottom: 4%;
+}
+.collapsible-options {
+  display: flex;
+  width: 100%;
+}
+.collapsible-options label {
+  font-weight: 600;
+  align-self: center;
+}
+.collapsible-options select {
+  width: 70%;
+  height: 90%;
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  color: #000;
+  font-size: 20px;
+}
+.collapsible-options select option {
+  font-size: 16px;
+}
+.form-scheduling-body-calendar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.form-scheduling-body-calendar-title h3 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.form-scheduling-body-calendar-content-date-title h4 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.form-scheduling-body-calendar-content-date-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+}
+.form-scheduling-body-calendar-content-date {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4%;
+}
+.form-scheduling-body-calendar-content {
+  display: flex;
+  flex-direction: row;
+}
+.form-scheduling-body-calendar-content-horary-title h4 {
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+.form-scheduling-body-calendar-content-horary {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4%;
+}
+.form-scheduling-body-calendar-content-horary select {
+  width: 100%;
+  height: 60%;
+  border: none;
+  border-bottom: 1px solid rgba(25, 22, 23, 0.5);
+  background: transparent;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+}
+.form-scheduling-body-button button {
+  width: 90%;
+  height: 90%;
+  border: none;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.form-scheduling-body-button:hover button {
+  background: rgba(20, 20, 20, 0.8);
+  color: #fff;
+  border: 1px solid #000;
+}
