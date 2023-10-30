@@ -87,7 +87,7 @@ const Sidebar = ({ onComponentChange }) => {
             style={{ display: hover ? "flex" : "none" }}
             onClick={handleAppointmentClick}
           >
-            scheduled appoint
+            appoinment calendar
           </span>
         </div>
         <div className="collapsible-item" onClick={toggleExpandedData}>
