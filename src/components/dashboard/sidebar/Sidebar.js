@@ -78,7 +78,7 @@ const Sidebar = ({ onComponentChange }) => {
             style={{ display: hover ? "flex" : "none" }}
             onClick={handleDashboardClick}
           >
-            Dashboard
+            Statistics
           </span>
         </div>
         <div className="sidebar-menu-item">
