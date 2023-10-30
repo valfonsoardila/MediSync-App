@@ -94,7 +94,7 @@ const Sidebar = ({ onComponentChange }) => {
           <div className="collapsible-header">
             <FontAwesomeIcon icon={faUser} />
             <span style={{ display: hover ? "flex" : "none" }}>
-            Control Patient
+              Patient Control
             </span>
           </div>
           {expandedData === true && hover === true ? (
@@ -105,7 +105,7 @@ const Sidebar = ({ onComponentChange }) => {
               >
                 <FontAwesomeIcon icon={faHeartPulse} />
                 <span style={{ display: hover ? "flex" : "none" }}>
-                  Diagnostico
+                  Diagnóstico
                 </span>
               </div>
               <div
@@ -114,7 +114,7 @@ const Sidebar = ({ onComponentChange }) => {
               >
                 <FontAwesomeIcon icon={faStethoscope} />
                 <span style={{ display: hover ? "flex" : "none" }}>
-                  Historial clinico
+                  Clinical history
                 </span>
               </div>
             </div>
@@ -140,9 +140,7 @@ const Sidebar = ({ onComponentChange }) => {
           onClick={handleOutSesionClick}
         >
           <FontAwesomeIcon icon={faDoorOpen} />
-          <span style={{ display: hover ? "flex" : "none" }}>
-            Log out
-          </span>
+          <span style={{ display: hover ? "flex" : "none" }}>Log out</span>
         </div>
       </div>
     </div>
