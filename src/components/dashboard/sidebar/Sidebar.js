@@ -21,6 +21,21 @@ const Sidebar = ({ onComponentChange }) => {
     onComponentChange("dashboard");
     console.log("dashboard");
   };
+
+  const handleAppointmentClick = () => {
+    onComponentChange("appointment");
+  };
+  const handleDiagnosesClick = () => {
+    onComponentChange("diagnoses");
+  };
+  const handleHistoriesClick = () => {
+    onComponentChange("histories");
+    console.log("histories");
+  };
+  const handleScheduleClick = () => {
+    onComponentChange("schedule");
+    console.log("schedule");
+  };
   const handleProfileClick = () => {
     onComponentChange("profile");
     console.log("profile");
@@ -33,7 +48,6 @@ const Sidebar = ({ onComponentChange }) => {
   };
   const toggleExpandedData = () => {
     setExpandedData(!expandedData);
-    console.log(expandedData);
   };
   return (
     <div
@@ -68,7 +82,7 @@ const Sidebar = ({ onComponentChange }) => {
           <FontAwesomeIcon icon={faCalendar} />
           <span
             style={{ display: hover ? "flex" : "none" }}
-            onClick={handleDashboardClick}
+            onClick={handleAppointmentClick}
           >
             Citas agendadas
           </span>
@@ -77,30 +91,30 @@ const Sidebar = ({ onComponentChange }) => {
           <div className="collapsible-header">
             <FontAwesomeIcon icon={faUser} />
             <span style={{ display: hover ? "flex" : "none" }}>
-              Gestion pacientes
+              Gestion paciente
             </span>
           </div>
-          {expandedData &&
-            hover &&
-            (console.log("expandedData", expandedData),
+          {expandedData===true &&
+            hover===true ?
             (
               <div className="collapsible-body">
-                <div className="collapsible-body-item">
+                <div className="collapsible-body-item" onClick={handleDiagnosesClick}>
                   <FontAwesomeIcon icon={faHeartPulse} />
                   <span style={{ display: hover ? "flex" : "none" }}>
                     Diagnostico
                   </span>
                 </div>
-                <div className="collapsible-body-item">
+                <div className="collapsible-body-item" onClick={handleHistoriesClick}>
                   <FontAwesomeIcon icon={faStethoscope} />
                   <span style={{ display: hover ? "flex" : "none" }}>
                     Historial clinico
                   </span>
                 </div>
               </div>
-            ))}
+            ) : null
+            }
         </div>
-        <div className="sidebar-menu-item">
+        <div className="sidebar-menu-item" onClick={handleScheduleClick}>
           <FontAwesomeIcon icon={faClock} />
           <span style={{ display: hover ? "flex" : "none" }}>
             Gestion horarios

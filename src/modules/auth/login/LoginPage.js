@@ -2,6 +2,7 @@ import React from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
+import ApiGoogle from "./APIs/ApiGoogle";
 import "./LoginPage.css";
 
 const LoginPage = ({ onComponentChange }) => {
@@ -53,6 +54,10 @@ const LoginPage = ({ onComponentChange }) => {
           <span className="form-footer-text">
             Don't have an account? <span onClick={handleRegisterClick}>Sign up</span>
           </span>
+          <div className="form-footer-divider" />
+          <div className="form-footer-google">
+            <ApiGoogle />
+          </div>
         </div>
       </div>
     </>
