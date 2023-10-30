@@ -87,14 +87,14 @@ const Sidebar = ({ onComponentChange }) => {
             style={{ display: hover ? "flex" : "none" }}
             onClick={handleAppointmentClick}
           >
-            medical calendar
+            Medical calendar
           </span>
         </div>
         <div className="collapsible-item" onClick={toggleExpandedData}>
           <div className="collapsible-header">
             <FontAwesomeIcon icon={faUser} />
             <span style={{ display: hover ? "flex" : "none" }}>
-              Patient management
+            Control Patient
             </span>
           </div>
           {expandedData === true && hover === true ? (
