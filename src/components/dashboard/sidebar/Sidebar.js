@@ -122,7 +122,7 @@ const Sidebar = ({ onComponentChange }) => {
         </div>
         <div className="sidebar-menu-item" onClick={handleScheduleClick}>
           <FontAwesomeIcon icon={faClock} />
-          <span style={{ display: hover ? "flex" : "none" }}>Schedule</span>
+          <span style={{ display: hover ? "flex" : "none" }}>Work schedule</span>
         </div>
         <div className="sidebar-menu-item" onClick={handleProfileClick}>
           <FontAwesomeIcon icon={faCog} onClick={handleProfileClick} />
