@@ -2,23 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./AppointmentCalendarPage.css";
 
-const AppointmentDialog = ({
-  isOpen,
-  onClose,
-  date,
-  showAppointmentsForDay,
-}) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="appointment-dialog">
-      <h3>Citas para {date.toDateString()}</h3>
-      {/* Aquí puedes mostrar las citas del día */}
-      <button onClick={onClose}>Cerrar</button>
-    </div>
-  );
-};
-
 const AppointmentCalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [isDialogOpen, setDialogOpen] = useState(false);

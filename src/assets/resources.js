@@ -6,6 +6,9 @@ import silhouette from './imgs/medical.png';
 import scheduling from './imgs/scheduling.png';
 import diagnostic from './imgs/diagnostic.png';
 import user from './icons/user.png';
+import pizarraLow from './icons/pizarra_low.png';
+import pizarraMedium from './icons/pizarra_medium.png';
+import pizarraHigh from './icons/pizarra_full.png';
 
 export const resources = {
     logo: logo,
@@ -15,5 +18,8 @@ export const resources = {
     silhouette:silhouette,
     scheduling:scheduling,
     diagnostic:diagnostic,
+    pizarraLow:pizarraLow,
+    pizarraMedium:pizarraMedium,
+    pizarraHigh:pizarraHigh,
     user:user
 }
