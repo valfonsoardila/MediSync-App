@@ -73,7 +73,7 @@ const Sidebar = ({ onComponentChange }) => {
           <span>Menu</span>
         </div>
         <div className="sidebar-menu-item" onClick={handleDashboardClick}>
-          <FontAwesomeIcon icon={faDashboard} onClick={handleDashboardClick} />
+          <FontAwesomeIcon icon={faDashboard} />
           <span
             style={{ display: hover ? "flex" : "none" }}
             onClick={handleDashboardClick}
@@ -81,12 +81,9 @@ const Sidebar = ({ onComponentChange }) => {
             Statistics
           </span>
         </div>
-        <div className="sidebar-menu-item">
+        <div className="sidebar-menu-item" onClick={handleAppointmentClick}>
           <FontAwesomeIcon icon={faCalendar} />
-          <span
-            style={{ display: hover ? "flex" : "none" }}
-            onClick={handleAppointmentClick}
-          >
+          <span style={{ display: hover ? "flex" : "none" }}>
             Medical calendar
           </span>
         </div>
@@ -105,7 +102,7 @@ const Sidebar = ({ onComponentChange }) => {
               >
                 <FontAwesomeIcon icon={faHeartPulse} />
                 <span style={{ display: hover ? "flex" : "none" }}>
-                  Diagnóstico
+                  Diagnosis
                 </span>
               </div>
               <div
@@ -122,7 +119,9 @@ const Sidebar = ({ onComponentChange }) => {
         </div>
         <div className="sidebar-menu-item" onClick={handleScheduleClick}>
           <FontAwesomeIcon icon={faClock} />
-          <span style={{ display: hover ? "flex" : "none" }}>Work schedule</span>
+          <span style={{ display: hover ? "flex" : "none" }}>
+            Work schedule
+          </span>
         </div>
         <div className="sidebar-menu-item" onClick={handleProfileClick}>
           <FontAwesomeIcon icon={faCog} onClick={handleProfileClick} />
