@@ -15,6 +15,7 @@ Aplicacion web para la gestion de consultorio medico hecho en React Js y Native.
 
 ## `Work calendar`
 
+![WorkSchedule](https://github.com/VictorArdila/MediSync-App/assets/89551043/758775b9-c952-4dba-b9cc-e16f3bf57534)
 
 
 
