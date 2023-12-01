@@ -132,7 +132,7 @@ const AppointmentCalendarPage = () => {
         </div>
         <div className="appointment-schedule">
           <div className="appointment-schedule-header">
-            <h3>Horario de citas</h3>
+            <h3>Citas por dia</h3>
           </div>
         </div>
       </div>

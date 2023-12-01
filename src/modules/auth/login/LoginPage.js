@@ -2,7 +2,8 @@ import React from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
-import ApiGoogle from "./APIs/ApiGoogle";
+// import ApiGoogle from "./APIs/ApiGoogle";
+import { signinRequest } from "../../../api/auth";
 import "./LoginPage.css";
 
 const LoginPage = ({ onComponentChange }) => {
@@ -12,9 +13,21 @@ const LoginPage = ({ onComponentChange }) => {
   const handleForgotClick = () => {
     onComponentChange("forgot");
   };
-    const login = () => {
-    window.location.href = "/dashboard";
+
+  const handleLogin = () => {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    signinRequest(email, password)
+      .then((response) => {
+        console.log(response);
+        window.location.href = "/dashboard";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <>
       <div className="logocontainer">
@@ -45,7 +58,7 @@ const LoginPage = ({ onComponentChange }) => {
             <span className="forgotpassword" onClick={handleForgotClick}>Forgot password?</span>
           </div>
           <div className="form-group">
-            <button type="submit" className="btn-primary" onClick={login}>
+            <button type="submit" className="btn-primary" onClick={handleLogin}>
               Login
             </button>
           </div>
@@ -56,7 +69,7 @@ const LoginPage = ({ onComponentChange }) => {
           </span>
           <div className="form-footer-divider" />
           <div className="form-footer-google">
-            <ApiGoogle />
+            {/* <ApiGoogle /> */}
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import {
   faStethoscope,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { signoutRequest } from "../../../api/auth";
 import "./Sidebar.css";
 
 const Sidebar = ({ onComponentChange }) => {
@@ -41,6 +42,7 @@ const Sidebar = ({ onComponentChange }) => {
     console.log("profile");
   };
   const handleOutSesionClick = () => {
+    signoutRequest();
     window.location.href = "/";
   };
   const changeHover = () => {

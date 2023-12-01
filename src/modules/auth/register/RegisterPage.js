@@ -2,12 +2,35 @@ import React from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { signupRequest } from "../../../api/auth";
 import "./RegisterPage.css";
 
 const RegisterPage = ({ onComponentChange }) => {
   const handleRegisterClick = () => {
     onComponentChange("login");
   };
+
+  const handleRegister = () => {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    } else {
+      signupRequest(name, email, password)
+        .then((response) => {
+          console.log(response);
+          onComponentChange("login");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
+
   return (
     <>
       <div className="back-arrow">
@@ -46,7 +69,7 @@ const RegisterPage = ({ onComponentChange }) => {
             />
           </div>
           <div className="form-group">
-            <button className="btn btn-primary">Register</button>
+            <button className="btn btn-primary" onClick={handleRegister}>Register</button>
           </div>
         </div>
       </div>
