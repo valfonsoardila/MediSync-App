@@ -1,0 +1,252 @@
+{
+    "entidades": [
+        {
+            "no.": 1,
+            "entidad": "coosalud eps-s",
+            "código": "ESS024 - EPS042",
+            "código_movilidad": "ESSC24 - EPSS42",
+            "nit": 900226715,
+            "régimen": "ambos regímenes"
+        },
+        {
+            "no.": 2,
+            "entidad": "nueva eps",
+            "código": "EPS037 - EPSS41",
+            "código_movilidad": "EPSS37 - EPS041",
+            "nit": 900156264,
+            "régimen": "ambos regímenes"
+        },
+        {
+            "no.": 3,
+            "entidad": "mutual ser",
+            "código": "ESS207 - EPS048",
+            "código_movilidad": "ESSC07 - EPSS48",
+            "nit": 806008394,
+            "régimen": "ambos regímenes"
+        },
+        {
+            "no.": 4,
+            "entidad": "aliansalud eps",
+            "código": "EPS001",
+            "código_movilidad": "EPSS01",
+            "nit": 830113831,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 5,
+            "entidad": "salud total eps s.a.",
+            "código": "EPS002",
+            "código_movilidad": "EPSS02",
+            "nit": 800130907,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 6,
+            "entidad": "eps sanitas",
+            "código": "EPS005",
+            "código_movilidad": "EPSS05",
+            "nit": 800251440,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 7,
+            "entidad": "eps sura",
+            "código": "EPS010",
+            "código_movilidad": "EPSS10",
+            "nit": 800088702,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 8,
+            "entidad": "famisanar",
+            "código": "EPS017",
+            "código_movilidad": "EPSS17",
+            "nit": 830003564,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 9,
+            "entidad": "servicio occidental de salud eps sos",
+            "código": "EPS018",
+            "código_movilidad": "EPSS18",
+            "nit": 805001157,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 10,
+            "entidad": "salud mia eps",
+            "código": "EPS046",
+            "código_movilidad": "EPSS46",
+            "nit": 900914254,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 11,
+            "entidad": "comfenalco valle",
+            "código": "EPS012",
+            "código_movilidad": "EPSS12",
+            "nit": 890303093,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 12,
+            "entidad": "compensar eps",
+            "código": "EPS008",
+            "código_movilidad": "EPSS08",
+            "nit": 860066942,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 13,
+            "entidad": "epm - empresas publicas de medellin",
+            "código": "EAS016",
+            "código_movilidad": "N/A",
+            "nit": 890904996,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 14,
+            "entidad": "fondo de pasivo social de ferrocarriles nacionales de colombia",
+            "código": "EAS027",
+            "código_movilidad": "N/A",
+            "nit": 800112806,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 15,
+            "entidad": "cajacopi atlantico",
+            "código": "CCF055",
+            "código_movilidad": "CCFC55",
+            "nit": 890102044,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 16,
+            "entidad": "capresoca",
+            "código": "EPS025",
+            "código_movilidad": "EPSC25",
+            "nit": 891856000,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 17,
+            "entidad": "comfachoco",
+            "código": "CCF102",
+            "código_movilidad": "CCFC20",
+            "nit": 891600091,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 18,
+            "entidad": "comfaoriente",
+            "código": "CCF050",
+            "código_movilidad": "CCFC50",
+            "nit": 890500675,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 19,
+            "entidad": "eps familiar de colombia",
+            "código": "CCF033",
+            "código_movilidad": "CCFC33",
+            "nit": 901543761,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 20,
+            "entidad": "asmet salud",
+            "código": "ESS062",
+            "código_movilidad": "ESSC62",
+            "nit": 900935126,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 21,
+            "entidad": "emssanar e.s.s.",
+            "código": "ESS118",
+            "código_movilidad": "ESSC18",
+            "nit": 901021565,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 22,
+            "entidad": "capital salud eps-s",
+            "código": "EPSS34",
+            "código_movilidad": "EPSC34",
+            "nit": 900298372,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 23,
+            "entidad": "savia salud eps",
+            "código": "EPSS40",
+            "código_movilidad": "EPS040",
+            "nit": 900604350,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 24,
+            "entidad": "dusakawi epsi",
+            "código": "EPSI01",
+            "código_movilidad": "EPSIC1",
+            "nit": 824001398,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 25,
+            "entidad": "asociacion indigena del cauca epsi",
+            "código": "EPSI03",
+            "código_movilidad": "EPSIC3",
+            "nit": 817001773,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 26,
+            "entidad": "anas wayuu epsi",
+            "código": "EPSI04",
+            "código_movilidad": "EPSIC4",
+            "nit": 839000495,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 27,
+            "entidad": "mallamas epsi",
+            "código": "EPSI05",
+            "código_movilidad": "EPSIC5",
+            "nit": 837000084,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 28,
+            "entidad": "pijaos salud epsi",
+            "código": "EPSI06",
+            "código_movilidad": "EPSIC6",
+            "nit": 809008362,
+            "régimen": "subsidiado"
+        },
+        {
+            "no.": 29,
+            "entidad": "salud bolivar eps sas",
+            "código": "EPS047",
+            "código_movilidad": "EPSS47",
+            "nit": 901438242,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 30,
+            "entidad": "salud vida eps",
+            "código": "EPS043",
+            "código_movilidad": "EPSS43",
+            "nit": 900604350,
+            "régimen": "contributivo"
+        },
+        {
+            "no.": 31,
+            "entidad": "coomeva eps",
+            "código": "EPS003",
+            "código_movilidad": "EPSS03",
+            "nit": 800149923,
+            "régimen": "contributivo"
+        }
+    ]
+}

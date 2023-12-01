@@ -1,0 +1,39 @@
+Especialidad,Subcategoría
+Medicina General,Medicina Familiar
+Medicina General,Medicina Interna
+Medicina General,Medicina de Urgencias
+Cirugía,Cirugía General
+Cirugía,Cirugía Cardiovascular
+Cirugía,Cirugía Ortopédica
+Cirugía,Cirugía Plástica
+Especialidades Quirúrgicas,Gastroenterología
+Especialidades Quirúrgicas,Neurocirugía
+Especialidades Quirúrgicas,Cirugía Torácica
+Especialidades Quirúrgicas,Cirugía Vascular
+Pediatría,Neonatología
+Pediatría,Pediatría Cardiológica
+Pediatría,Pediatría Gastroenterológica
+Pediatría,Pediatría Oncológica
+Ginecología y Obstetricia,Obstetricia
+Ginecología y Obstetricia,Ginecología
+Ginecología y Obstetricia,Ginecología Oncológica
+Cardiología,Cardiología Intervencionista
+Cardiología,Electrofisiología Cardíaca
+Cardiología,Cardiología Pediátrica
+Neurología,Neurología Clínica
+Neurología,Neurorradiología
+Neurología,Neurología Pediátrica
+Oftalmología,Cirugía de Cataratas
+Oftalmología,Retinología
+Oftalmología,Oftalmología Pediátrica
+Otorrinolaringología,Cirugía de Cabeza y Cuello
+Otorrinolaringología,Otología
+Otorrinolaringología,Rinología
+Dermatología,Dermatología Clínica
+Dermatología,Dermatología Cosmética
+Psiquiatría,Psiquiatría Adulta
+Psiquiatría,Psiquiatría Infantil y Adolescente
+Radiología e Imagenología,Radiología Diagnóstica
+Radiología e Imagenología,Radiología Intervencionista
+Anestesiología,Anestesiología Pediátrica
+Anestesiología,Medicina del Dolor
