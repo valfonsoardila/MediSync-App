@@ -3,10 +3,12 @@ import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { signupRequest } from "../../../api/auth";
+import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
+import { Toaster, toast } from "sonner";
 import "./RegisterPage.css";
 
 const RegisterPage = ({ onComponentChange }) => {
-  const handleRegisterClick = () => {
+  const handleBackClick = () => {
     onComponentChange("login");
   };
 
@@ -16,25 +18,60 @@ const RegisterPage = ({ onComponentChange }) => {
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
 
-    if (password !== confirmPassword) {
-      alert("Passwords don't match");
-      return;
+    if(name === "" || email === "" || password === "" || confirmPassword === ""){
+      toast.error("No se pudo registrar", {
+        description: "Debe completar todos los campos",
+        icon: (
+          <FontAwesomeIcon
+            icon={faExclamation}
+            style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+    }else if (password !== confirmPassword) {
+      toast.error("No se pudo registrar", {
+        description: "Las contraseñas no coinciden",
+        icon: (
+          <FontAwesomeIcon
+            icon={faExclamation}
+            style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
     } else {
       signupRequest(name, email, password)
         .then((response) => {
           console.log(response);
+          toast.success("Registrado correctamente", {
+            description: "Por favor inicie sesión",
+            icon: (
+              <FontAwesomeIcon
+                icon={faCheck}
+                style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
+              />
+            ),
+          });
           onComponentChange("login");
         })
         .catch((error) => {
           console.log(error);
+          toast.error("No se pudo registrar", {
+            description: "Email ya registrado",
+            icon: (
+              <FontAwesomeIcon
+                icon={faExclamation}
+                style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+              />
+            ),
         });
+      });
     }
   };
 
   return (
     <>
       <div className="back-arrow">
-        <FontAwesomeIcon icon={faArrowLeft} onClick={handleRegisterClick} />
+        <FontAwesomeIcon icon={faArrowLeft} onClick={handleBackClick} />
       </div>
       <div className="user-image">
         <img src={resources.user} alt="user" />
@@ -69,6 +106,7 @@ const RegisterPage = ({ onComponentChange }) => {
             />
           </div>
           <div className="form-group">
+            <Toaster expand={true} richColors  />
             <button className="btn btn-primary" onClick={handleRegister}>Register</button>
           </div>
         </div>

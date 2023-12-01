@@ -1,15 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 // import ApiGoogle from "./APIs/ApiGoogle";
+// import Toast from "../../../components/utils/toast/Toast";
 import { signinRequest } from "../../../api/auth";
+import { Toaster, toast } from "sonner";
+import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
 import "./LoginPage.css";
 
 const LoginPage = ({ onComponentChange }) => {
+
   const handleRegisterClick = () => {
     onComponentChange("register");
   };
+
   const handleForgotClick = () => {
     onComponentChange("forgot");
   };
@@ -17,15 +22,44 @@ const LoginPage = ({ onComponentChange }) => {
   const handleLogin = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
-    signinRequest(email, password)
+    if(email === "" || password === ""){
+      toast.error("No se pudo autenticar", {
+        description: "Email o contraseña incorrectos",
+        icon: (
+          <FontAwesomeIcon
+            icon={faExclamation}
+            style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+    }else{
+      signinRequest(email, password)
       .then((response) => {
         console.log(response);
         window.location.href = "/dashboard";
+        toast.success("Autenticado correctamente", {
+          description: "Bienvenido",
+          icon: (
+            <FontAwesomeIcon
+              icon={faCheck}
+              style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
+            />  
+          ),
+        });
       })
       .catch((error) => {
         console.log(error);
+        toast.error("No se pudo autenticar", {
+          description: "Email o contraseña incorrectos",
+          icon: (
+            <FontAwesomeIcon
+              icon={faExclamation}
+              style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+            />
+          ),
+        });
       });
+    }
   };
 
   return (
@@ -55,9 +89,12 @@ const LoginPage = ({ onComponentChange }) => {
               name="password"
               placeholder="Password"
             />
-            <span className="forgotpassword" onClick={handleForgotClick}>Forgot password?</span>
+            <span className="forgotpassword" onClick={handleForgotClick}>
+              Forgot password?
+            </span>
           </div>
           <div className="form-group">
+            <Toaster expand={true} richColors  />
             <button type="submit" className="btn-primary" onClick={handleLogin}>
               Login
             </button>
@@ -65,12 +102,11 @@ const LoginPage = ({ onComponentChange }) => {
         </div>
         <div className="form-footer">
           <span className="form-footer-text">
-            Don't have an account? <span onClick={handleRegisterClick}>Sign up</span>
+            Don't have an account?{" "}
+            <span onClick={handleRegisterClick}>Sign up</span>
           </span>
           <div className="form-footer-divider" />
-          <div className="form-footer-google">
-            {/* <ApiGoogle /> */}
-          </div>
+          <div className="form-footer-google">{/* <ApiGoogle /> */}</div>
         </div>
       </div>
     </>

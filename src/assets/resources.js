@@ -11,6 +11,7 @@ import pizarraMedium from './icons/pizarra_medium.png';
 import pizarraHigh from './icons/pizarra_full.png';
 import diseases from './csv/diseases.csv';
 import specialties from './csv/specialties.csv';
+import eps from './json/eps.json';
 
 export const resources = {
     logo: logo,
@@ -25,5 +26,6 @@ export const resources = {
     pizarraHigh:pizarraHigh,
     user:user,
     diseases:diseases,
-    specialties:specialties
+    specialties:specialties,
+    eps:eps
 }

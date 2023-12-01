@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./SchedulingPage.css";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleLeft
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { getDoctors } from "../../../api/doctor";
 
 const FormScheduling = () => {
   const [selectedDocType, setSelectedDocType] = useState("TI");
@@ -14,9 +13,26 @@ const FormScheduling = () => {
 
   const docType = ["TI", "CC", "CE", "Pasaporte"];
   const regime = ["Contributivo", "Subsidiado", "Particular", "Otro"];
-  const ips = ["Sura", "Coomeva", "Salud Total", "Sanitas", "Nueva EPS"];
   const horary = ["8 a.m", "9 a.m", "10 a.m", "11 a.m", "12 p.m", "2 p.m"];
+  const eps = [];
+  const especialistas = [];
 
+  const getEps = () => {
+    const jsonEps = resources.eps;
+    const epsArray = jsonEps.entidades.map((entidad) => entidad.entidad);
+    epsArray.forEach((entidad) => {
+      eps.push(entidad);
+    });
+  };
+
+  const getEspecialistas = () => {
+    getDoctors().then((response) => {
+      const doctors = response.data;
+      doctors.forEach((doctor) => {
+        especialistas.push(doctor.name);
+      });
+    });
+  }
   const handleChangeDocType = (event) => {
     const select = event.target;
     const option = select.options[select.selectedIndex];
@@ -29,7 +45,7 @@ const FormScheduling = () => {
     setSelectedRegime(option.value);
   };
 
-  const handleChangeIps = (event) => {
+  const handleChangeEPS = (event) => {
     const select = event.target;
     const option = select.options[select.selectedIndex];
     setSelectedIps(option.value);
@@ -43,6 +59,9 @@ const FormScheduling = () => {
   const handleBack = () => {
     window.location.href = "/scheduling";
   };
+
+  getEps();
+  getEspecialistas();
 
   return (
     <div className="container-scheduling">
@@ -109,14 +128,14 @@ const FormScheduling = () => {
                 </div>
                 <div className="form-section-collapsible">
                   <div className="collapsible-options">
-                    <label>IPS de Afiliacion: </label>
-                    <select value={selectedIps} onChange={handleChangeIps}>
-                      <option value="IPS" disabled hidden>
-                        IPS
+                    <label>EPS de Afiliacion: </label>
+                    <select value={selectedIps} onChange={handleChangeEPS}>
+                      <option value="EPS" disabled hidden>
+                        EPS
                       </option>
-                      {ips.map((ips, index) => (
-                        <option key={index} value={ips}>
-                          {ips}
+                      {eps.map((eps, index) => (
+                        <option key={index} value={eps}>
+                          {eps}
                         </option>
                       ))}
                     </select>
@@ -164,6 +183,24 @@ const FormScheduling = () => {
                         Regimen
                       </option>
                       {regime.map((reg, index) => (
+                        <option key={index} value={reg}>
+                          {reg}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="form-section-collapsible">
+                  <div className="collapsible-options">
+                    <label>Especialista: </label>
+                    <select
+                      value={selectedRegime}
+                      onChange={handleChangeRegime}
+                    >
+                      <option value="Especialista" disabled hidden>
+                        Especialista
+                      </option>
+                      {especialistas.map((reg, index) => (
                         <option key={index} value={reg}>
                           {reg}
                         </option>

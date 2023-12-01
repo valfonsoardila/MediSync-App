@@ -84,10 +84,10 @@
   justify-content: center;
 }
 .container-manage-patient__content__buttons__scheduling:hover{
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(43, 190, 216, 0.3);
   border-radius: 12px;
 }
 .container-manage-patient__content__buttons__diagnostic:hover{
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(43, 216, 181, .3);
   border-radius: 12px;
 }

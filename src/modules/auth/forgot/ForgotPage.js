@@ -2,16 +2,47 @@ import React from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
+import { Toaster, toast } from "sonner";
 import "./ForgotPage.css";
 
 const ForgotPage = ({ onComponentChange }) => {
-  const handleRegisterClick = () => {
+
+  const handleBackClick = () => {
     onComponentChange("login");
   };
+
+  const handleRest = () => {
+    const email = document.getElementById("email").value;
+    if(email === ""){
+      toast.error("No se pudo restablecer", {
+        description: "Debe completar Introductir un email",
+        icon: (
+          <FontAwesomeIcon
+            icon={faExclamation}
+            style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+    }else{
+      toast.success("Restablecido correctamente", {
+        description: "Se ha enviado un correo a su email",
+        icon: (
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+      onComponentChange("login");
+    }
+  };
+
+
   return (
     <>
       <div className="back-arrow">
-        <FontAwesomeIcon icon={faArrowLeft} onClick={handleRegisterClick} />
+        <FontAwesomeIcon icon={faArrowLeft} onClick={handleBackClick} />
       </div>
 
       <div className="form-container">
@@ -30,7 +61,8 @@ const ForgotPage = ({ onComponentChange }) => {
             <input type="text" id="email" placeholder="Enter your email" />
           </div>
           <div className="form-group">
-            <button className="btn btn-primary">Forgot</button>
+            <Toaster expand={true} richColors  />
+            <button className="btn btn-primary" onClick={handleRest}>Forgot</button>
           </div>
         </div>
       </div>
