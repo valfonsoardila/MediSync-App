@@ -1,39 +1,39 @@
-Especialidad,Subcategoría
-Medicina General,Medicina Familiar
-Medicina General,Medicina Interna
-Medicina General,Medicina de Urgencias
-Cirugía,Cirugía General
-Cirugía,Cirugía Cardiovascular
-Cirugía,Cirugía Ortopédica
-Cirugía,Cirugía Plástica
-Especialidades Quirúrgicas,Gastroenterología
-Especialidades Quirúrgicas,Neurocirugía
-Especialidades Quirúrgicas,Cirugía Torácica
-Especialidades Quirúrgicas,Cirugía Vascular
-Pediatría,Neonatología
-Pediatría,Pediatría Cardiológica
-Pediatría,Pediatría Gastroenterológica
-Pediatría,Pediatría Oncológica
-Ginecología y Obstetricia,Obstetricia
-Ginecología y Obstetricia,Ginecología
-Ginecología y Obstetricia,Ginecología Oncológica
-Cardiología,Cardiología Intervencionista
-Cardiología,Electrofisiología Cardíaca
-Cardiología,Cardiología Pediátrica
-Neurología,Neurología Clínica
-Neurología,Neurorradiología
-Neurología,Neurología Pediátrica
-Oftalmología,Cirugía de Cataratas
-Oftalmología,Retinología
-Oftalmología,Oftalmología Pediátrica
-Otorrinolaringología,Cirugía de Cabeza y Cuello
-Otorrinolaringología,Otología
-Otorrinolaringología,Rinología
-Dermatología,Dermatología Clínica
-Dermatología,Dermatología Cosmética
-Psiquiatría,Psiquiatría Adulta
-Psiquiatría,Psiquiatría Infantil y Adolescente
-Radiología e Imagenología,Radiología Diagnóstica
-Radiología e Imagenología,Radiología Intervencionista
-Anestesiología,Anestesiología Pediátrica
-Anestesiología,Medicina del Dolor
+Especialidad,Subcategoría,Subespecialidad_1,Subespecialidad_2,Subespecialidad_3
+Medicina General,Medicina Familiar,Geriatría,Pediatría,Medicina Preventiva
+Medicina General,Medicina Interna,Cardiología,Gastroenterología,Endocrinología
+Medicina General,Medicina de Urgencias,Medicina de Emergencia,Traumatología,Toxicología
+Cirugía,Cirugía General,Cirugía de Tiroides,Cirugía de Hernia,Cirugía de Colon
+Cirugía,Cirugía Cardiovascular,Cirugía de Bypass Coronario,Cirugía de Válvula Cardíaca, 
+Cirugía,Cirugía Ortopédica,Ortopedia Pediátrica,Cirugía de Columna,Cirugía de Articulaciones
+Cirugía,Cirugía Plástica,Cirugía Estética,Cirugía Reconstructiva,Cirugía de Mano
+Especialidades Quirúrgicas,Gastroenterología,Gastroenterología Pediátrica,Hepatología, 
+Especialidades Quirúrgicas,Neurocirugía,Neurocirugía Pediátrica,Cirugía de Tumores Cerebrales,  
+Especialidades Quirúrgicas,Cirugía Torácica,Cirugía de Esófago,Cirugía de Pulmón, 
+Especialidades Quirúrgicas,Cirugía Vascular,Angiología,Cirugía Endovascular, 
+Pediatría,Neonatología,Cuidados Intensivos Neonatales,Cardiología Pediátrica, 
+Pediatría,Pediatría Cardiológica,Cardiología Pediátrica,Ecocardiografía Pediátrica, 
+Pediatría,Pediatría Gastroenterológica,Gastroenterología Pediátrica,Nutrición Pediátrica, 
+Pediatría,Pediatría Oncológica,Oncología Pediátrica,Hematología Pediátrica, 
+Ginecología y Obstetricia,Obstetricia,Medicina Materno-Fetal,Obstetricia Pediátrica, 
+Ginecología y Obstetricia,Ginecología,Ginecología Oncológica,Uroginecología,
+Cardiología,Cardiología Intervencionista,Cardiología Nuclear,Ecocardiografía, 
+Cardiología,Electrofisiología Cardíaca,Arritmias Cardíacas,Marcapasos, 
+Cardiología,Cardiología Pediátrica,Cardiopatías Congénitas,Ecocardiografía Pediátrica, 
+Neurología,Neurología Clínica,Enfermedades Neuromusculares,Neuroinmunología, 
+Neurología,Neurorradiología,Neuroimagen Funcional,Radiología de Cabeza y Cuello, 
+Neurología,Neurología Pediátrica,Trastornos Neurometabólicos,Neuropsicología Pediátrica, 
+Oftalmología,Cirugía de Cataratas,Cirugía de Glaucoma,Cirugía de Retina, 
+Oftalmología,Retinología,Enfermedades de la Retina,Degeneración Macular, 
+Oftalmología,Oftalmología Pediátrica,Estrabismo,Ambliopía, 
+Otorrinolaringología,Cirugía de Cabeza y Cuello,Oncología de Cabeza y Cuello,Cirugía de Tiroides, 
+Otorrinolaringología,Otología,Neurootología,Implantes Cocleares, 
+Otorrinolaringología,Rinología,Cirugía Endoscópica Nasosinusal,Rinoplastia, 
+Dermatología,Dermatología Clínica,Dermatopatología,Dermatoscopia,
+Dermatología,Dermatología Cosmética,Procedimientos Estéticos,Cirugía Dermatológica,
+Psiquiatría,Psiquiatría Adulta,Psicoterapia,Psicofarmacología,
+Psiquiatría,Psiquiatría Infantil y Adolescente,Trastornos del Desarrollo,Psiquiatría Forense,
+Radiología e Imagenología,Radiología Diagnóstica,Radiología Musculoesquelética,Radiología Abdominal,
+Radiología e Imagenología,Radiología Intervencionista,Intervenciones Guiadas por Imagen,Radiología Vascular,
+Anestesiología,Anestesiología Pediátrica,Cuidados Perioperatorios Pediátricos,Dolor Pediátrico,
+Anestesiología,Medicina del Dolor,Manejo del Dolor Crónico,Medicina Física y Rehabilitación,
+
