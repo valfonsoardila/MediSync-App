@@ -80,14 +80,14 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  align-items: start;
+  align-items: flex-start;
 }
 .form-section-two {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  align-items: end;
+  align-items: flex-end;
 }
 .form-section-one-input {
   display: flex;

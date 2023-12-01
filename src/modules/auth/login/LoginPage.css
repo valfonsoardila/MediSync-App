@@ -13,7 +13,7 @@
 }
 .logotext {
   font-size: 40px;
-  color: rgb(3, 166, 166);
+  color: rgb(12, 155, 174);
   font-weight: 600;
 }
 .logintext {
@@ -51,7 +51,7 @@
 .form-group span {
   margin-top: 1%;
   align-self: start;
-  color: #2bd8b5;
+  color: #0c9bae;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -120,7 +120,7 @@
   color: #000;
 }
 .form-footer-text span {
-  color: #2bd8b5;
+  color: #0c9bae;
   font-weight: 600;
   cursor: pointer;
 }
