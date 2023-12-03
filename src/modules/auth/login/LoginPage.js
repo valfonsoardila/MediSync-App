@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,6 @@ import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
 import "./LoginPage.css";
 
 const LoginPage = ({ onComponentChange }) => {
-
   const handleRegisterClick = () => {
     onComponentChange("register");
   };
@@ -22,7 +21,7 @@ const LoginPage = ({ onComponentChange }) => {
   const handleLogin = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    if(email === "" || password === ""){
+    if (email === "" || password === "") {
       toast.error("No se pudo autenticar", {
         description: "Email o contraseña incorrectos",
         icon: (
@@ -32,33 +31,49 @@ const LoginPage = ({ onComponentChange }) => {
           />
         ),
       });
-    }else{
+    } else {
       signinRequest(email, password)
-      .then((response) => {
-        console.log(response);
-        window.location.href = "/dashboard";
-        toast.success("Autenticado correctamente", {
-          description: "Bienvenido",
-          icon: (
-            <FontAwesomeIcon
-              icon={faCheck}
-              style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
-            />  
-          ),
+        .then((response) => {
+          console.log(response);
+          window.location.href = "/dashboard";
+          toast.success("Autenticado correctamente", {
+            description: "Bienvenido",
+            icon: (
+              <FontAwesomeIcon
+                icon={faCheck}
+                style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
+              />
+            ),
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+          console.log(error.message);
+          if (error.message === "Network Error") {
+            // Manejar caso de error del servidor
+            toast.error("Error del servidor", {
+              description: "Por favor, intenta nuevamente más tarde",
+              icon: (
+                <FontAwesomeIcon
+                  icon={faExclamation}
+                  style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+                />
+              ),
+            });
+          } else {
+            // Manejar caso de error de autenticación
+            console.log(error);
+            toast.error("No se pudo autenticar", {
+              description: "Email o contraseña incorrectos",
+              icon: (
+                <FontAwesomeIcon
+                  icon={faExclamation}
+                  style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+                />
+              ),
+            });
+          }
         });
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.error("No se pudo autenticar", {
-          description: "Email o contraseña incorrectos",
-          icon: (
-            <FontAwesomeIcon
-              icon={faExclamation}
-              style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
-            />
-          ),
-        });
-      });
     }
   };
 
@@ -94,7 +109,7 @@ const LoginPage = ({ onComponentChange }) => {
             </span>
           </div>
           <div className="form-group">
-            <Toaster expand={true} richColors  />
+            <Toaster expand={true} richColors />
             <button type="submit" className="btn-primary" onClick={handleLogin}>
               Login
             </button>

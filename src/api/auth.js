@@ -17,8 +17,12 @@ const signinRequest = (email, password) => {
     });
 };
 
+const resetRequest = (email) => {
+  return axios.post(`${API_URL}/reset-password`, { email });
+};
+
 const signoutRequest = () => {
   localStorage.removeItem("user");
 };
 
-export { signupRequest, signinRequest, signoutRequest };
+export { signupRequest, signinRequest, signoutRequest, resetRequest };

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./SchedulingPage.css";
 import { resources } from "../../../assets/resources";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faExclamation } from "@fortawesome/free-solid-svg-icons";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { Toaster, toast } from "sonner";
 import { getDoctors } from "../../../api/doctor";
 
 const FormScheduling = () => {
@@ -10,6 +12,7 @@ const FormScheduling = () => {
   const [selectedRegime, setSelectedRegime] = useState("Contributivo");
   const [selectedIps, setSelectedIps] = useState("Sura");
   const [selectedHorary, setSelectedHorary] = useState("8 a.m");
+  const [selectedEspecialista, setSelectedEspecialista] = useState("Especialista");
 
   const docType = ["TI", "CC", "CE", "Pasaporte"];
   const regime = ["Contributivo", "Subsidiado", "Particular", "Otro"];
@@ -31,12 +34,98 @@ const FormScheduling = () => {
       doctors.forEach((doctor) => {
         especialistas.push(doctor.name);
       });
+    }).catch((error) => {
+      if (error.message === "Network Error") {
+        // Manejar caso de error del servidor
+        setSelectedEspecialista("Error del servidor");
+        toast.error("Error del servidor", {
+          description: "Por favor, intenta nuevamente más tarde",
+          icon: (
+            <FontAwesomeIcon
+              icon={faExclamation}
+              style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+            />
+          ),
+        });
+      } else {
+        // Manejar caso de error de autenticación
+        setSelectedEspecialista("No hay especialistas");
+        toast.error("No se pudo cargar especialistas", {
+          description: "No hay medicos disponibles",
+          icon: (
+            <FontAwesomeIcon
+              icon={faExclamation}
+              style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+            />
+          ),
+
+        });
+      }
     });
-  }
+  };
+
+  const handleSchedule = (event) => {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const companion = document.getElementById("companion").value;
+    const id = document.getElementById("id").value;
+    const address = document.getElementById("address").value;
+    const date = document.getElementById("date").value;
+    const docType = selectedDocType;
+    const regime = selectedRegime;
+    const eps = selectedIps;
+    const horary = selectedHorary;
+    const especialista = selectedEspecialista;
+
+    const data = {
+      name,
+      email,
+      phone,
+      companion,
+      id,
+      address,
+      date,
+      docType,
+      regime,
+      eps,
+      horary,
+      especialista,
+    };
+
+    if (name === "" || email === "" || phone === "" || companion === "" || id === "" || address === "" || date === "" || docType === "" || regime === "" || eps === "" || horary === "" || especialista === "") {
+      toast.error("Error al agendar cita", {
+        description: "Por favor, llena todos los campos",
+        icon: (
+          <FontAwesomeIcon
+            icon={faExclamation}
+            style={{ color: "red", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+    } else {
+      toast.success("Cita agendada", {
+        description: "La cita ha sido agendada exitosamente",
+        icon: (
+          <FontAwesomeIcon
+            icon={faCheck}
+            style={{ color: "green", fontSize: "20px", fontWeight: "600" }}
+          />
+        ),
+      });
+      console.log(data);
+    }
+  };
   const handleChangeDocType = (event) => {
     const select = event.target;
     const option = select.options[select.selectedIndex];
     setSelectedDocType(option.value);
+  };
+  const handleChangeEspecialista = (event) => {
+    const select = event.target;
+    const option = select.options[select.selectedIndex];
+    setSelectedEspecialista(option.value);
   };
 
   const handleChangeRegime = (event) => {
@@ -194,15 +283,15 @@ const FormScheduling = () => {
                   <div className="collapsible-options">
                     <label>Especialista: </label>
                     <select
-                      value={selectedRegime}
-                      onChange={handleChangeRegime}
+                      value={selectedEspecialista}
+                      onChange={handleChangeEspecialista}
                     >
-                      <option value="Especialista" disabled hidden>
-                        Especialista
+                      <option value={selectedEspecialista}>
+                        {selectedEspecialista}
                       </option>
-                      {especialistas.map((reg, index) => (
-                        <option key={index} value={reg}>
-                          {reg}
+                      {especialistas.map((doctor, index) => (
+                        <option key={index} value={doctor}>
+                          {doctor}
                         </option>
                       ))}
                     </select>
@@ -242,7 +331,8 @@ const FormScheduling = () => {
             </div>
           </div>
           <div className="form-scheduling-body-button">
-            <button>Agendar</button>
+            <Toaster richColors />
+            <button onClick={handleSchedule}>Agendar</button>
           </div>
         </div>
       </div>
